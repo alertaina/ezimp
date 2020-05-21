@@ -1,0 +1,30 @@
+
+
+{% include "ezimp/header.html" %}
+{% load static %}
+  <body>
+  <div class="container">
+  <h2>Iniciar Sesión</h2>
+  <form method="POST">
+        {% csrf_token %}
+  <div class="control-group">
+  <label class="control-label" for="id_usuario"><dt>Usuario</dt></label>
+  <input type="text" class="form-control" placeholder="Usuario" name="username" id="id_usuario">
+  </div>
+  <div class="control-group">
+  <label class="control-label" for="id_contra"><dt>Contraseña</dt></label>
+  <input type="password" class="form-control" placeholder="Contraseña" name="password" id="id_contra">
+  </div>
+ </br>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+ </br>
+ <div class="row">
+  <div class="col-sm-4">¿No está registrado? <a href="/ezimp/signup/">Cree su Cuenta</a></div>
+  <div class="col-sm-8"><a href="/ezimp/signup/">Recuperar Usuario y Contraseña</a></div>
+ </div>
+</div>
+
+<!-- ARCHIVOS JS -->
+{% include "ezimp/mainjs.html" %}
+</body>

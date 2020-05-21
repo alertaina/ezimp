@@ -1,0 +1,32 @@
+
+{% extends "mainapp/base.html" %}
+
+{% load static %}
+{% block contenido_header %}<!-- agregamos estilo -->{% endblock %}
+{% block title %}Cambio Cambio{% endblock %}
+{% block contenido_body %}
+<div class="container-fluid">
+  <h1>My First Bootstrap Page</h1>
+  <p>This is some text.</p>
+  <!-- BARRA DE NAVEGACION -->
+  {% include "mainapp/navbar.html" %}
+<div class="jumbotron jumbotron-fluid pg-jumbotron" style="background-image: url({% static 'mainapp/img/img_jumbotron.jpg' %}); height: 400px">
+    <div class="container">
+      <h1 class="text-white pg-jumbotron-header">EZEIZA imp: Interfaz de Modelación para Pronóstico</h1>
+      <div class="row">
+        <div class="col text-center">
+          <a title="Presentación" class="btn btn-light btn-rounded btn-ezimp" role="button" href="#" id=descarga>Git Hub<i class="fas fa-arrow-right"></i></a>
+            <script type="text/javascript">
+              document.getElementById("descarga").addEventListener("click",function(){alert("Se podrá descargar la aplicación para hacer una implementación local de la misma")});
+            </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Jumbotron -->
+  <!-- FOOTER -->
+  {% include "mainapp/footer.html" %}
+</div>  
+{% endblock %}
+
+
